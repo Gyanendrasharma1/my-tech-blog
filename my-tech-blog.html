@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <style>
+        
+        
+        /* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: #000; /* Black background for universe */
+    overflow-x: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+/* Create the Starry Universe Background */
+@keyframes starfield {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2018/10/04/18/47/star-3727479_960_720.jpg') repeat top center;
+    animation: starfield 60s linear infinite;
+    z-index: -1; /* Ensure stars are in the background */
+}
+
+/* Header and Logo */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+header .logo {
+    font-size: 30px;
+    color: #8a2be2; /* Violet color */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px #8a2be2, 0 0 30px #8a2be2; /* Glowing effect */
+}
+
+/* Navigation Bar Styling */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #8a2be2;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px #fff, 0 0 20px #8a2be2; /* Glowing effect */
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff; /* Glow on hover */
+    text-shadow: 0 0 20px #fff, 0 0 30px #8a2be2;
+}
+
+/* Search Box Styling */
+.search input[type="search"] {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 200px;
+    box-shadow: 0 0 5px #fff;
+}
+
+.search button {
+    background-color: #8a2be2;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 8px #8a2be2;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #7a2be2;
+    box-shadow: 0 0 15px #8a2be2;
+}
+
+/* Main Section */
+main {
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Tagline and Text Styling */
+#tagline h1 {
+    font-size: 50px;
+    color: #8a2be2;
+    text-align: left; /* Left align */
+    text-shadow: 0 0 25px #fff, 0 0 50px #8a2be2;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#tagline h3 {
+    font-size: 30px;
+    color: #fff;
+    text-align: left; /* Left align */
+    margin-top: 20px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+#tagline p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #dcdcdc;
+    text-align: left; /* Left align */
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 4s ease-in-out;
+}
+
+/* Categories and Programming Section */
+section h2, section h1 {
+    text-align: left; /* Left align */
+    color: #8a2be2;
+    font-size: 36px;
+    text-shadow: 0 0 15px #fff, 0 0 25px #8a2be2;
+}
+
+ul {
+    list-style-type: none;
+    text-align: left; /* Left align the list */
+    padding: 0;
+    margin-left: 20px;
+}
+
+ul li {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+ul li a {
+    color: #8a2be2;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+ul li a:hover {
+    color: #fff;
+    text-shadow: 0 0 25px #8a2be2;
+}
+
+/* Glowing Hover Effect for Links */
+mark {
+    background-color: transparent;
+    color: #8a2be2;
+    text-shadow: 0 0 10px #8a2be2, 0 0 15px #fff;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Image Section */
+figure {
+    text-align: center;
+    margin-top: 30px;
+}
+
+figure img {
+    width: 500px; /* Set image width to 500px */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(98, 0, 234, 0.7);
+    transition: transform 0.3s ease-out;
+}
+
+figure img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #8a2be2;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 18px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Keyframes for Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #8a2be2, 0 0 20px #fff;
+    }
+    100% {
+        text-shadow: 0 0 20px #8a2be2, 0 0 40px #fff;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Tech Blog</div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Latesttech">Latest Technology</a></li>
+                    <li><a href="#technews">Tech News</a></li>
+                    <li><a href="#Contactus">Conact Us</a></li>
+                    <li><a href="#Aboutus">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="search">
+            <input type="search" name="searchbox" id="searchbox" placeholder="Search Blog">
+            <button type="button">Search</button>
+        </div>
+    </header>
+    <main>
+        <div id="tagline">
+            <h1>Empowering Minds with Technology and Innovation</h1>
+            <h3>Discover, Learn, and Innovate – One Blog at a Time</h3>
+            <p>Welcome to the <mark>Tech Blog</mark> – Your go-to source for everything technology and programming. Stay
+                updated with
+                the latest trends, tools, and insights in the tech world. Whether you're a beginner or an expert, we aim
+                to empower you with knowledge that drives innovation. Explore in-depth articles on programming
+                languages, tech advancements, and much more. Join our journey to unravel <mark>the future of
+                    technology!</mark></p>
+        </div>
+        <section>
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="ProgrammingLanguages">Programming Languages</a></li>
+                <li><a href="Techtrends">Tech Trends</a></li>
+                <li><a href="Tools">Tools</a></li>
+            </ul>
+        </section>
+        <section>
+            <h1>Programming Languages</h1>
+            <ul>
+                <li>
+                    <h2>HTML</h2>HTML (HyperText Markup Language) is the standard language used to create web pages. It
+                    provides the
+                    basic structure of a website, which is enhanced and modified using CSS and JavaScript. HTML uses
+                    "tags" to define elements on a webpage.
+                </li>
+
+                <figure> <img src="basic syntax.jpg" alt="Html Syntax">
+                    <figcaption>A basic Syntax of Html</figcaption>
+                </figure>
+            </ul>
+            <h3>Theory for the Given Basic HTML Code</h3>
+            <h4>&lt;!DOCTYPE html&gt;</h2>
+                <ul>
+                    <li><b>Definition:</b>Declares the document type and version of HTML.</li>
+                    <li><b>Purpose:</b>Ensures the browser interprets the document as an HTML5 file.</li>
+                    <li><b>Importance:</b>It helps maintain consistency and compatibility across web browsers.</li>
+                </ul>
+                <h4>&lt;head&gt;</h4>
+                <ul>
+                    <li><b>Definition:</b>Contains metadata about the document, which is not visible on the webpage but
+                        is crucial for functionality.</li>
+                    <li><b>Elements in</b>&lt;head&gt;
+                        <ul>
+                            <li>&lt;meta charset="UTF-8"&gt;
+                                <ul>
+                                    <li>Specifies the character encoding (UTF-8 supports most characters and symbols).
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;:
+                                <ul>
+                                    <li>Ensures the webpage scales correctly on different devices, especially mobile
+                                        phones.
+                                    </li>
+                                    <li> The attribute width=device-width sets the width of the page to the device's
+                                        screen width.</li>
+                                    <li> initial-scale=1.0 ensures the initial zoom level is 100%.</li>
+                                </ul>
+                            </li>
+                            <li>&lt;title&gt;Document&lt;/title&gt;
+                                <ul>
+                                    <li>Sets the title of the webpage, displayed on the browser tab.</li>
+                                    <li> It is important for SEO and user navigation.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4>&lt;body&gt;</h4>
+                <ul>
+                    <li><b>Definition:</b>Contains all the visible content of the webpage.</li>
+                    <li><b>Role:</b>Any text, images, videos, or interactive elements that appear on the webpage are
+                        placed within the &lt;body&gt; tags.</li>
+                </ul>
+                <h3>Conclusion</h3>
+                    <ul>
+                        <li>
+                            This structure is a starting template for any HTML document. Developers add content and
+                            elements within the &lt;body&gt; tag to build functional webpages. The &lt;head&gt; tag ensures the page is well-optimized and ready for different devices and
+                            browsers.
+                        </li>
+                    </ul>
+                
+
+        </section>
+    </main>
+    <footer>Tech blog &copy; All Right Reserved.</footer>
+</body>
+
+</html>

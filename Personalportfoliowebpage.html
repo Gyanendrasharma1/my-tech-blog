@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Page</title>
+    <style>/* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #6a1b9a, #1e88e5, #8e24aa);
+            color: #fff;
+            line-height: 1.6;
+            padding-bottom: 60px; /* Space for footer */
+        }
+        
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-bottom: 2px solid #ffffff;
+        }
+        
+        #Myname h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        #tagname h1 {
+            font-size: 1.5rem;
+            color: #ddd;
+            font-weight: 300;
+            margin-top: 10px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        
+        /* Main Section */
+        main {
+            padding: 40px 20px;
+        }
+        
+        #Professional-details {
+            margin-bottom: 40px;
+        }
+        
+        ol {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        ol li {
+            margin-bottom: 20px;
+            animation: slideUp 1s ease-out;
+        }
+        
+        ol li ul {
+            padding-left: 20px;
+        }
+        
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            animation: fadeIn 3s ease-in-out;
+        }
+        
+        table, th, td {
+            border: 1px solid #fff;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #5e35b1;
+        }
+        
+        td {
+            background-color: #8e24aa;
+        }
+        
+        /* Aside Section */
+        aside {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+            animation: fadeIn 4s ease-in-out;
+        }
+        
+        aside h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff;
+            animation: slideUp 2s ease-in-out;
+        }
+        
+        aside ul {
+            list-style-type: none;
+        }
+        
+        aside ul li {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        aside ul li:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Footer Section */
+        footer {
+            display: none; /* Initially hidden */
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            border-top: 2px solid #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        /* Show Footer when Scrolling */
+        footer.show-footer {
+            display: block;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideUp {
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        </style>
+</head>
+
+<body>
+    <header>
+        <div id="Myname">
+            <h1>Gyanendra Sharma</h1>
+        </div>
+        <div id="tagname">
+            <h1>Aspiring Web Developer | Passionate Learner</h1>
+        </div>
+       
+    </header>
+    <main>
+        <section>
+            <div id="Professional-details">
+                <ol>
+                    <li>Introduction
+                        <ul>
+                            <li>
+                                <p>Hi, I am Gyanendra Sharma, an aspiring web developer passionate about creating
+                                    user-friendly and efficient websites. Currently, I am mastering the fundamentals
+                                    of
+                                    web
+                                    development, starting with HTML, and I am dedicated to learning CSS, JavaScript,
+                                    and
+                                    backend technologies in the future.
+                                    I am a quick learner who enjoys solving problems and exploring new opportunities
+                                    to
+                                    grow. With a strong interest in technology and a commitment to continuous
+                                    learning,
+                                    I
+                                    aim to build innovative solutions that make a difference</p>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>Skills
+                        <ul>
+                            <li>HTML Basics</li>
+                            <li>Communication Skills</li>
+                            <li>Teamwork</li>
+                        </ul>
+                    </li>
+
+
+                    <li>Education
+                        <table border="1" cellpadding="10" cellspacing="5">
+                            <caption>Education Details</caption>
+                            <tr>
+                                <th>Year</th>
+                                <th>Degree/Certificate</th>
+                                <th>Institute:</th>
+                            </tr>
+                            <tr>
+                                <td>2019-2020</td>
+                                <td>High School</td>
+                                <td>S.P.W Inter College</td>
+                            </tr>
+                            <tr>
+                                <td>2021-2022</td>
+                                <td>Intermediate</td>
+                                <td>S.P.W Inter College</td>
+                            </tr>
+                            <tr>
+                                <td>2022-2025</td>
+                                <td>Bachelor of Computer Applications</td>
+                                <td>Dayanand Academy of Management Studies</td>
+                            </tr>
+                            <tr>
+                                <td>2022</td>
+                                <td>Cyber Security & Ethical Hacking</td>
+                                <td>SKDeft</td>
+                            </tr>
+                            <tr>
+                                <td>2024</td>
+                                <td>Cloud Computing</td>
+                                <td>SKDeft</td>
+                            </tr>
+                        </table>
+
+                    </li>
+                    <li>Hobbies
+                        <ul>
+                            <li>Reading motivational books</li>
+                            <li>Watching educational videos</li>
+                            <li>Exploring technology</li>
+                            <li>Playing Chess</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <aside>
+           
+                <h3>Contact Details</h3>
+                <ul>
+                    <li><strong>Phone:</strong>+91 8423090829</li>
+                    <li><strong>Email:</strong>Gyanendramail04@gmail.com</li>
+                    <li><strong>LinkedIn:</strong><a
+                            href="https://www.linkedin.com/in/gyanendra-sharma-47517a2b6/">Linkedin
+                            Profile Link</a></li>
+                    <li><strong>Github:</strong><a href="https://github.com/Gyanendrasharma1">Github Profile Link</a>
+                    </li>
+                </ul>
+
+            
+                <h3>Recent Achievements</h3>
+
+                <ul>
+                    <li>Successfully completed <b>5 HTML projects in one week,</b> showcasing strong dedication to
+                        learning and practicing web development skills.</li>
+                    <li> Started reading <b>'You Can Win' by Shiv Khera,</b> a motivational book to improve personal
+                        development and confidence.</li>
+                    <li> Listened to the podcast <b>'Stephen Burt: Why People Need Poetry,</b>' gaining insights into
+                        creativity and expression through poetry.</li>
+                    <li>Enhanced my understanding of HTML semantic elements, tables, and forms, building a strong
+                        foundation for web development.</li>
+                </ul>
+           
+        </aside>
+
+    </main>
+    <footer>
+        <p>Gyanendra Sharma &copy; 
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Use</a>
+        </p>
+    </footer>
+</body>
+
+
+
+</html>

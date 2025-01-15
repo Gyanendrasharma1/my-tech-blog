@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(120deg, #1e90ff, #87cefa);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #1e3a8a;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-in-out;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s;
+}
+
+section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 1rem auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    animation: fadeInUp 1.5s;
+}
+
+section p {
+    margin-bottom: 1rem;
+}
+
+form {
+    margin-top: 1rem;
+}
+
+fieldset {
+    border: 2px solid #1e90ff;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+button {
+    background: #1e90ff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+footer {
+    background: #1e3a8a;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #ffd700;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Quiz App</div>
+        <nav id="navigation-bar">
+            <ul>
+                <li><a href="#Morequiz">More Quiz</a></li>
+                <li><a href="#Help">Help Us</a></li>
+                <li><a href="#Contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>
+            Challenge Your Mind - Play, Learn, and Conquer the Quiz!
+        </h1>
+        <section>
+            <p>Welcome to the Quiz App! Test your knowledge and challenge your thinking skills with our fun and
+                interactive questions. Here's how you can play:</p>
+                <ol>
+                    <li>Carefully read each question displayed on your screen.</li>
+                    <li>If you’d like to start over, simply click the 'Reset' button to clear all your selections and try again.</li>
+                    <li> Select the best answer by clicking on one of the options provided for each question.</li>
+                    <li>If you're unsure, take your time – there’s no rush!</li>
+                    <li>Once you’ve answered all the questions, hit the 'Submit' button to finalize your answers.</li>
+                </ol>
+        </section>
+        <section>
+            <form>
+                      <h3>General Knowledge:</h3>
+                <fieldset>
+                    <legend>What is the capital of India?</legend>
+                    <input type="radio" name="q1" id="New-Delhi" value="New Delhi" required> New Delhi <br>
+                    <input type="radio" name="q1" id="Uttar-Pradesh" value="Uttar Pradesh"> Uttar Pradesh <br>
+                    <input type="radio" name="q1" id="Madhya-Pradesh" value="Madhya Pradesh"> Madhya Pradesh <br>
+                    <input type="radio" name="q1" id="J&K" value="Jammu & Kashmir"> Jammu & Kashmir <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Which is the largest planet in our Solar System?</legend>
+                    <input type="radio" name="q2" id="Mars" value="Mars" required> Mars <br>
+                    <input type="radio" name="q2" id="Jupiter" value="Jupiter"> Jupiter <br>
+                    <input type="radio" name="q2" id="Saturn" value="Saturn"> Saturn <br>
+                    <input type="radio" name="q2" id="Venus" value="Venus"> Venus<br>
+                </fieldset>
+                <fieldset>
+                    <legend>What is the national bird of India?</legend>
+                    <input type="radio" name="q3" id="Peacock" value="Peacock" required> Peacock <br>
+                    <input type="radio" name="q3" id="Sparrow" value="Sparrow"> Sparrow <br>
+                    <input type="radio" name="q3" id="Parrot" value="Parrot"> Parrot <br>
+                    <input type="radio" name="q3" id="Eagle" value="Eagle"> Eagle  <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Which year did India gain independence?</legend>
+                    <input type="radio" name="q4" id="1945" value="1945" required> 1945 <br>
+                    <input type="radio" name="q4" id="1947" value="1947"> 1947 <br>
+                    <input type="radio" name="q4" id="1950" value="1950"> 1950 <br>
+                    <input type="radio" name="q4" id="1952" value="1952">1952<br>
+                </fieldset>
+               <h3>Science and Technology:</h3>
+                <fieldset>
+                    <legend>Which planet is known as the Red Planet?</legend>
+                    <input type="radio" name="q5" id="Mars" value="Mars" required> Mars <br>
+                    <input type="radio" name="q5" id="Jupiter" value="Jupiter"> Jupiter <br>
+                    <input type="radio" name="q5" id="Earth" value="Earth"> Earth <br>
+                    <input type="radio" name="q5" id="Neptune" value="Neptune"> Neptune <br>
+                </fieldset>
+                <fieldset>
+                    <legend>What is H2O commonly known as?</legend>
+                    <input type="radio" name="q6" id="Water" value="Water" required> Water <br>
+                    <input type="radio" name="q6" id="Hydrogen" value="Hydrogen"> Hydrogen <br>
+                    <input type="radio" name="q6" id="Oxygen" value="Oxygen">  <br>
+                    <input type="radio" name="q6" id="Carbon" value=" Carbon"> Carbon<br>
+                </fieldset>
+                <fieldset>
+                    <legend>What is the speed of light?</legend>
+                    <input type="radio" name="q7" id="" value="" required> 300,000 km/s <br>
+                    <input type="radio" name="q7" id="150,000km/s" value="150,000 km/s"> 150,000 km/s <br>
+                    <input type="radio" name="q7" id="100,000km/s" value="100,000 km/s"> 100,000 km/s <br>
+                    <input type="radio" name="q7" id="200,000km/s" value="200,000 km/s"> 200,000 km/s<br>
+                </fieldset>
+                <fieldset>
+                    <legend>Which gas do plants absorb from the atmosphere?</legend>
+                    <input type="radio" name="q8" id="Oxygen" value="Oxygen" required> Oxygen <br>
+                    <input type="radio" name="q8" id="Carbon Dioxide" value="Carbon Dioxide"> Carbon Dioxide <br>
+                    <input type="radio" name="q8" id="Nitrogen" value="Nitrogen"> Nitrogen <br>
+                    <input type="radio" name="q8" id="Hydrogen" value="Hydrogen"> Hydrogen<br>
+                </fieldset>
+                <fieldset>
+                    <legend>Who invented the telephone?</legend>
+                    <input type="radio" name="q9" id="AlexanderGrahamBell" value="Alexander Graham Bell" required> Alexander Graham Bell<br>
+                    <input type="radio" name="q9" id="AlbertEinstein" value="Albert Einstein"> Albert Einstein <br>
+                    <input type="radio" name="q9" id="IsaacNewton" value="Isaac Newton"> Isaac Newton <br>
+                    <input type="radio" name="q9" id="NikolaTesla" value="Nikola Tesla"> Nikola Tesla<br>
+                </fieldset>
+              <fieldset>
+                <legend>Click on Submit. if all answer are right</legend>
+                <button type="submit">Submit</button>
+              </fieldset> 
+              <fieldset>
+                <legend>Click on Reset. if all answer are wrong</legend>
+                <button type="reset">Reset</button>
+              </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer> <p>Quiz App &copy; 2025</p>
+        <nav>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
