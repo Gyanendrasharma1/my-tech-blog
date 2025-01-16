@@ -65,12 +65,16 @@ nav ul {
     list-style-type: none;
     display: flex;
     gap: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center align items */
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
     color: #8a2be2;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px; /* Reduced font size for better fit */
     letter-spacing: 1px;
     text-shadow: 0 0 8px #fff, 0 0 20px #8a2be2; /* Glowing effect */
     transition: color 0.3s ease;
@@ -80,6 +84,24 @@ nav a:hover {
     color: #fff; /* Glow on hover */
     text-shadow: 0 0 20px #fff, 0 0 30px #8a2be2;
 }
+
+/* Responsive Navigation for Small Screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header elements */
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 15px; /* Adjust gap for vertical alignment */
+    }
+
+    nav a {
+        font-size: 16px; /* Adjust font size for small screens */
+    }
+}
+
 
 /* Search Box Styling */
 .search input[type="search"] {
